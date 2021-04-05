@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  margin: 1rem 0; }
+
+button {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit; }
+
+a {
+  text-decoration: none;
+  color: #ffffff; }
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem #791b1b; }
+
+.btn:hover {
+  box-shadow: 0 0 0 0.2rem #0d2b2c; }
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  width: calc(100% - 2rem);
+  margin: 1rem; }
+  .input-group label {
+    position: absolute;
+    left: 1rem;
+    top: initial;
+    transition: top 0.5s ease, left 0.5s ease;
+    opacity: 0.5; }
+    .input-group label.has-content {
+      top: -1rem;
+      left: 0;
+      font-size: 0.75rem;
+      opacity: 1; }
+  .input-group input {
+    width: 100%;
+    margin: 0; }
+    .input-group input:focus + label {
+      top: -1rem;
+      left: 0;
+      font-size: 0.75rem;
+      opacity: 1; }
+  .input-group .input-inset-end {
+    position: absolute;
+    right: 0;
+    padding: 0 1rem;
+    background-color: transparent; }
+    .input-group .input-inset-end:focus {
+      color: #595959; }
+    .input-group .input-inset-end:hover {
+      color: #a32424; }
+
+input {
+  margin: 1rem 0rem;
+  border: 0;
+  border-radius: 0.25rem;
+  outline: 0;
+  color: #ffffff;
+  padding: 0.2rem;
+  background: #0d2b2c;
+  line-height: 1.7rem;
+  font-size: 1rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: color 0.5s ease, border-radius 1s ease, background-color 0.5s ease; }
+  input:focus {
+    background: #0d2b2c;
+    border-bottom: 0.3rem solid #a32424;
+    margin-bottom: -0.3rem; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px #0d2b2c inset; }
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ffffff;
+  opacity: 0.8;
+  /* Firefox */ }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ffffff;
+  opacity: 0.8; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ffffff;
+  opacity: 0.8; }
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  z-index: 1; }
+
+.card {
+  background-color: #000000;
+  width: 100%;
+  max-width: 50rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+@keyframes navshow {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0%; } }
+
+@keyframes navIn {
+  0% {
+    opacity: 0;
+    width: 110%; }
+  100% {
+    opacity: 1;
+    width: 100%; } }
+
+@keyframes navCollapse {
+  0% {
+    height: initial; }
+  100% {
+    height: 0; } }
+
+#nav {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  background-color: #000000;
+  position: relative;
+  z-index: 5; }
+  #nav .nav-brand {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    #nav .nav-brand .nav-brand-logo {
+      filter: invert(100%);
+      height: 5rem; }
+  #nav .nav-toggle {
+    margin-right: auto;
+    background-color: transparent; }
+    #nav .nav-toggle .show {
+      transform: rotate(270deg);
+      transition: all 0.2s ease; }
+    #nav .nav-toggle .hide {
+      transform: rotate(-180deg);
+      transition: all 0.2s ease; }
+  #nav .nav-collapse {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 3.2rem;
+    background-color: #000000;
+    height: calc(100vh - 7.2rem);
+    padding: 1rem 0;
+    width: 100%;
+    flex-direction: column;
+    z-index: 10; }
+    #nav .nav-collapse.show {
+      display: flex;
+      animation: navshow 0.05s ease; }
+    #nav .nav-collapse.hide {
+      display: flex;
+      animation: navshow 0.05s ease reverse; }
+    #nav .nav-collapse .nav-menu-item {
+      padding: 1rem;
+      background-color: transparent;
+      color: #a32424;
+      border-radius: 0;
+      text-align: left; }
+      #nav .nav-collapse .nav-menu-item:hover {
+        background-color: #0d2b2c;
+        color: #ffffff; }
+      #nav .nav-collapse .nav-menu-item:active {
+        background-color: #a32424;
+        color: #ffffff; }
+
+#nav-content {
+  width: 100vw; }
+  #nav-content .nav-dropdowns .nav-dropdown-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem 0 2rem;
+    position: relative; }
+    #nav-content .nav-dropdowns .nav-dropdown-toggle:focus {
+      opacity: 0.6; }
+    #nav-content .nav-dropdowns .nav-dropdown-toggle h3 {
+      font-size: 1rem; }
+  #nav-content .slide-in-left {
+    font-size: 0.9rem; }
+    #nav-content .slide-in-left .nav-links {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 2rem; }
+      #nav-content .slide-in-left .nav-links .nav-link:not(:last-child) {
+        margin-bottom: 1.5rem; }
+    #nav-content .slide-in-left .nav-region {
+      padding: 2rem; }
+      #nav-content .slide-in-left .nav-region .nav-current-region {
+        margin: 0 0.5rem; }
+
+.show #nav-content .nav-dropdowns .nav-dropdown-toggle {
+  display: flex;
+  animation: navIn 1s ease; }
+
+.show #nav-content .slide-in-left {
+  display: initial; }
+
+.nav-item-collapse {
+  background-color: #ffffff;
+  color: #000000;
+  overflow: hidden;
+  display: none;
+  height: 0; }
+  .nav-item-collapse.show {
+    display: block;
+    height: initial;
+    animation: navCollapse 0.5s ease reverse; }
+  .nav-item-collapse.hide {
+    display: block;
+    height: 0;
+    animation: navCollapse 0.5s ease; }
+
+html,
+body {
+  background-color: #333333;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  height: 100vh; }

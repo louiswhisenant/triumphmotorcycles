@@ -1,0 +1,19 @@
+.nav-item-collapse {
+	background-color: $light;
+	color: $color-2;
+	overflow: hidden;
+	display: none;
+	height: 0;
+
+	&.show {
+		display: block;
+		height: initial;
+		animation: navCollapse 0.5s ease reverse;
+	}
+
+	&.hide {
+		display: block;
+		height: 0;
+		animation: navCollapse 0.5s ease;
+	}
+}
