@@ -16,11 +16,7 @@ const NavItemCollapse = ({ id, className, isOpen, timing, children }) => {
 				clearTimeout(clearActive);
 			};
 		}
-	}, [isOpen, id, timing]);
-
-	// useEffect(() => {
-	// 	isOpen === id ? setActive('show') : setActive('hide');
-	// });
+	}, [isOpen, id, active, timing]);
 
 	return <div className={`${className} ${active}`}>{children}</div>;
 };

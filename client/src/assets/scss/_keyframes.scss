@@ -20,9 +20,18 @@
 
 @keyframes navCollapse {
 	0% {
-		height: initial;
+		height: 100vh;
 	}
 	100% {
 		height: 0;
+	}
+}
+
+@keyframes slideinleft {
+	0% {
+		left: 100%;
+	}
+	100% {
+		left: 0%;
 	}
 }

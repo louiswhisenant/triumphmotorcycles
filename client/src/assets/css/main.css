@@ -139,9 +139,15 @@ select:-webkit-autofill:focus {
 
 @keyframes navCollapse {
   0% {
-    height: initial; }
+    height: 100vh; }
   100% {
     height: 0; } }
+
+@keyframes slideinleft {
+  0% {
+    left: 100%; }
+  100% {
+    left: 0%; } }
 
 #nav {
   display: flex;
@@ -237,13 +243,43 @@ select:-webkit-autofill:focus {
   display: none;
   height: 0; }
   .nav-item-collapse.show {
-    display: block;
-    height: initial;
+    display: flex;
+    height: 100vh;
     animation: navCollapse 0.5s ease reverse; }
+    .nav-item-collapse.show .nav-item-content {
+      display: block;
+      background-color: pink;
+      margin-left: 0;
+      transition: margin-left 1s ease; }
   .nav-item-collapse.hide {
     display: block;
-    height: 0;
+    height: 0px;
     animation: navCollapse 0.5s ease; }
+    .nav-item-collapse.hide .nav-item-content {
+      margin-left: 100vw;
+      transition: margin-left 1s ease; }
+  .nav-item-collapse #nav-item-content {
+    display: none; }
+
+#motorcycle {
+  width: 100%; }
+  #motorcycle .select-a-range-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 500; }
+  #motorcycle .select-a-range {
+    display: flex;
+    justify-content: center; }
+    #motorcycle .select-a-range ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center; }
+      #motorcycle .select-a-range ul li {
+        margin: 1rem; }
 
 html,
 body {

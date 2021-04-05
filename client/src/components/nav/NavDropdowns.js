@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Motorcycle from './navdropcontent/Motorcycle';
 import NavItemCollapse from './NavItemCollapse';
 import NavItemContent from './NavItemContent';
 
@@ -21,7 +22,7 @@ const NavDropdowns = () => {
 				id='nav-motorcycle-collapse'
 				className={`nav-item-collapse nav-motorcycle-collapse`}
 				timing='500'>
-				<NavItemContent />
+				<Motorcycle />
 			</NavItemCollapse>
 
 			<button

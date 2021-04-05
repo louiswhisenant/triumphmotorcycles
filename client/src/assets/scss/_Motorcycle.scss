@@ -1,0 +1,26 @@
+#motorcycle {
+	width: 100%;
+	.select-a-range-toggle {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.5rem 2rem;
+		font-size: 0.8rem;
+		font-weight: 500;
+	}
+
+	.select-a-range {
+		display: flex;
+		justify-content: center;
+		ul {
+			list-style-type: none;
+			padding: 0;
+			text-align: center;
+
+			li {
+				margin: 1rem;
+			}
+		}
+	}
+}

@@ -6,14 +6,32 @@
 	height: 0;
 
 	&.show {
-		display: block;
-		height: initial;
+		display: flex;
+		height: 100vh;
 		animation: navCollapse 0.5s ease reverse;
+
+		.nav-item-content {
+			display: block;
+			background-color: pink;
+			// animation: slideinleft 0.5s ease 0.5s reverse;
+			margin-left: 0;
+			transition: margin-left 1s ease;
+		}
 	}
 
 	&.hide {
 		display: block;
-		height: 0;
+		height: 0px;
 		animation: navCollapse 0.5s ease;
+
+		.nav-item-content {
+			margin-left: 100vw;
+			// animation: slideinleft 0.5s ease 0.5s;
+			transition: margin-left 1s ease;
+		}
+	}
+
+	#nav-item-content {
+		display: none;
 	}
 }

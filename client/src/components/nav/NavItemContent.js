@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 const NavItemContent = () => {
 	return (
-		<Fragment>
+		<div className='nav-item-content'>
 			<div>Content</div>
 			<div>Content</div>
 			<div>Content</div>
 			<div>Content</div>
 			<div>Content</div>
-		</Fragment>
+		</div>
 	);
 };
 
