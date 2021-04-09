@@ -1,0 +1,30 @@
+#nav-accessories {
+	// display: flex;
+	// flex-wrap: wrap;
+	// align-items: flex-start;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	padding-top: 1.5rem;
+
+	.accessories-link {
+		width: 100%;
+		margin: 0;
+
+		.accessories-img {
+			// image styling
+			background-color: pink;
+			height: 8rem;
+		}
+
+		.accessories-title {
+			text-transform: uppercase;
+			font-size: 0.9rem;
+		}
+
+		.accessories-subtitle {
+			// Don't display on mobile
+			display: none;
+		}
+	}
+}

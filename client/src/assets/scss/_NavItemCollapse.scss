@@ -2,36 +2,38 @@
 	background-color: $light;
 	color: $color-2;
 	overflow: hidden;
-	display: none;
+	display: flex;
 	height: 0;
+	margin: 0 0 0 100%;
+	transition: height 0.5s ease;
+
+	a {
+		color: $color-2;
+		font-size: 0.8rem;
+		margin-top: 1.5rem;
+
+		&:hover {
+			color: $color-3;
+		}
+
+		i {
+			color: $color-3;
+			margin-left: 0.25rem;
+		}
+	}
+
+	button {
+		padding: 0;
+	}
 
 	&.show {
-		display: flex;
-		height: 100vh;
-		animation: navCollapse 0.5s ease reverse;
-
-		.nav-item-content {
-			display: block;
-			background-color: pink;
-			// animation: slideinleft 0.5s ease 0.5s reverse;
-			margin-left: 0;
-			transition: margin-left 1s ease;
-		}
+		margin: 0 0 0 0;
+		padding: 0.5rem 2rem;
+		transition: margin 0.2s ease 0.5s, height 0.5s ease;
 	}
 
 	&.hide {
-		display: block;
-		height: 0px;
-		animation: navCollapse 0.5s ease;
-
-		.nav-item-content {
-			margin-left: 100vw;
-			// animation: slideinleft 0.5s ease 0.5s;
-			transition: margin-left 1s ease;
-		}
-	}
-
-	#nav-item-content {
-		display: none;
+		padding: 0.5rem 2rem;
+		margin: 0rem;
 	}
 }

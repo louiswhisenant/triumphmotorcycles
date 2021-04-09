@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Motorcycle from './navdropcontent/Motorcycle';
+import Accessories from './navdropcontent/Accessories';
+import Motorcycle from './navdropcontent/motorcycle/Motorcycle';
 import NavItemCollapse from './NavItemCollapse';
 import NavItemContent from './NavItemContent';
 
@@ -15,7 +16,7 @@ const NavDropdowns = () => {
 			<button
 				onClick={() => handleToggle('nav-motorcycle-collapse')}
 				className='nav-dropdown-toggle'>
-				<h3>MOTORCYCLE</h3> <i className='fas fa-chevron-down'></i>
+				<h3>Motorcycle</h3> <i className='fas fa-chevron-down'></i>
 			</button>
 			<NavItemCollapse
 				isOpen={isOpen}
@@ -28,24 +29,24 @@ const NavDropdowns = () => {
 			<button
 				onClick={() => handleToggle('nav-accessories-collapse')}
 				className='nav-dropdown-toggle'>
-				<h3>ACCESSORIES</h3> <i className='fas fa-chevron-down'></i>
+				<h3>Accessories</h3> <i className='fas fa-chevron-down'></i>
 			</button>
 			<NavItemCollapse
 				isOpen={isOpen}
 				id='nav-accessories-collapse'
 				className='nav-item-collapse nav-accessories-collapse'
 				timing='500'>
-				<NavItemContent />
+				<Accessories />
 			</NavItemCollapse>
 
 			<a href='#!' className='nav-dropdown-toggle nav-clothing'>
-				<h3>CLOTHING</h3> <i className='fas fa-chevron-down'></i>
+				<h3>Clothing</h3> <i className='fas fa-chevron-down'></i>
 			</a>
 
 			<button
 				onClick={() => handleToggle('nav-owners-collapse')}
 				className='nav-dropdown-toggle'>
-				<h3>OWNERS</h3> <i className='fas fa-chevron-down'></i>
+				<h3>Owners</h3> <i className='fas fa-chevron-down'></i>
 			</button>
 			<NavItemCollapse
 				isOpen={isOpen}
@@ -58,7 +59,7 @@ const NavDropdowns = () => {
 			<button
 				onClick={() => handleToggle('nav-inside-collapse')}
 				className='nav-dropdown-toggle'>
-				<h3>INSIDE TRIUMPH</h3> <i className='fas fa-chevron-down'></i>
+				<h3>Inside Triumph</h3> <i className='fas fa-chevron-down'></i>
 			</button>
 			<NavItemCollapse
 				isOpen={isOpen}

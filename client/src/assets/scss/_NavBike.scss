@@ -1,0 +1,33 @@
+.nav-bike {
+	display: flex;
+	align-items: center;
+
+	.bike-media {
+		// image styling
+		width: 40%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.bike-img {
+			width: 100%;
+		}
+	}
+
+	.bike-info {
+		width: 60%;
+
+		.bike-info-name {
+			font-size: 0.95rem;
+			font-weight: 500;
+			margin: 0.5rem 0 1rem 0;
+			text-transform: uppercase;
+		}
+
+		.bike-info-price {
+			font-size: 0.9rem;
+			margin: 0;
+			font-weight: 400;
+		}
+	}
+}

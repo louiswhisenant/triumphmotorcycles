@@ -6,7 +6,12 @@
 @import '_Nav';
 @import '_NavContent';
 @import '_NavItemCollapse';
-@import '_Motorcycle';
+
+@import '_NavMotorcycle';
+@import '_NavBikeCategory';
+@import '_NavBike';
+
+@import '_NavAccessories';
 
 // @import '_TopNav';
 
@@ -25,6 +30,13 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	overflow-x: hidden;
 	height: 100vh;
+}
+
+hr {
+	width: 100%;
+	margin: 0.5rem 0 1rem 0;
+	color: $dark;
+	background-color: $dark;
 }
 
 @import '_media-queries';

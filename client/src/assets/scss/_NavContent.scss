@@ -50,6 +50,10 @@
 			.nav-dropdown-toggle {
 				display: flex;
 				animation: navIn 1s ease;
+
+				h3 {
+					text-transform: uppercase;
+				}
 			}
 		}
 
